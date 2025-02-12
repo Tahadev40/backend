@@ -5,8 +5,28 @@ const asyncHandler = (requestHandler) => {
 }
 
 
-
 export {asyncHandler}
+
+const hondler = (hand) => {(req, res, next) => {
+    Promise.resolve(hand(req, res, next)).reject((err) => next(err))
+}}
+
+export {hondler}
+
+
+const taha = (aina) => {(req, res, next) => {
+    Promise.resolve(aina(req, res, next)).reject((err) => next(err))
+}}
+
+export {taha}
+
+
+const fuck = (shak) => {(req, res, next) => {
+    Promise.resolve(shak(req, res, next)).reject((err) => next(err))
+}}
+
+export {fuck}
+
 
 // const asyncHandler = () => {}
 // const asyncHandler = (func) => () => {}
